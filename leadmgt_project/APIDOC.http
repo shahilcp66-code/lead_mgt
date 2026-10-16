@@ -1,0 +1,56 @@
+###
+post http://127.0.0.1:8000/lead
+Content-Type: application/json
+Authorization: Basic admin:admin
+
+{
+    "name":"rinu",
+    "phone":"1234567890",
+    "email":"shahilcp@gmail.com",
+    "course":"django",
+    "source":"walk-in",
+    "status":"new",
+    "notes":""
+
+}
+
+
+###
+get http://127.0.0.1:8000/lead
+Authorization: Basic admin:admin
+
+
+###
+get http://127.0.0.1:8000/lead/detail/1/
+Authorization: Basic admin:admin
+
+
+###
+patch http://127.0.0.1:8000/lead/detail/4/
+Content-Type: application/json
+Authorization: Basic admin:admin
+
+{
+    "email":"rocky@gmail.com"
+}
+ 
+###
+delete http://127.0.0.1:8000/leadd/etail/2/
+Authorization: Basic  admin:admin
+
+
+
+
+###
+get http://127.0.0.1:8000/lead?search=anu
+Authorization: Basic admin:admin
+
+
+###
+get http://127.0.0.1:8000/lead?ordering=name
+Authorization: Basic admin:admin
+
+
+###
+get http://127.0.0.1:8000/lead?status=contacted
+Authorization: Basic admin:admin
